@@ -1,0 +1,28 @@
+{
+  "collectionName": "engines",
+  "info": {
+    "singularName": "engine",
+    "pluralName": "engines",
+    "displayName": "Engine",
+    "description": "Motortyper för flygplan"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": ["Piston", "Turboprop", "Jet", "Electric"],
+      "default": "Piston"
+    },
+    "ads": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ad.ad"
+    }
+  }
+}
